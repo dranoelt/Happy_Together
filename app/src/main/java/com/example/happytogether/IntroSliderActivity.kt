@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.happytogether.databinding.ActivityIntroSliderBinding
-import com.example.happytogether.login.LoginFragment
 
 
 class IntroSliderActivity : AppCompatActivity() {
@@ -57,7 +56,7 @@ class IntroSliderActivity : AppCompatActivity() {
             }
         })
         binding.tvSkip.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, StartupActivity::class.java))
             finish()
         }
         binding.tvNext.setOnClickListener {
@@ -66,19 +65,9 @@ class IntroSliderActivity : AppCompatActivity() {
             if (position < fragmentList.lastIndex) {
                 binding.vpIntroSlider.currentItem = position + 1
             } else {
-                val loginFragment = LoginFragment.newInstance()
-                openFragment(loginFragment)
-                binding.vpIntroSlider.visibility = View.GONE
-                binding.indicatorLayout.visibility = View.GONE
-                binding.tvNext.visibility = View.GONE
-                binding.tvSkip.visibility = View.GONE
+                startActivity(Intent(this,StartupActivity::class.java))
+                finish()
             }
         }
-    }
-    private fun openFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.introContainer, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
     }
 }

@@ -160,7 +160,7 @@
             android:layout_width="280dp"
             android:layout_height="50dp"
             android:layout_marginTop="52dp"
-            android:background="@drawable/shape_rect_bluegray_50"
+            android:background="@drawable/shape_rect_blue_gray_50"
             android:backgroundTint="@color/blue_gray"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
