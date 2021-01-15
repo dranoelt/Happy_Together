@@ -28,4 +28,9 @@
     <string name="desc_intro1">Sebelum melakukan pemesanan, cek terlebih dahulu biaya yang dibutuhkan. Manfaatkan fitur estimasi biaya kami untuk mengetahui perkiraan biayanya</string>
     <string name="desc_intro2">Lihat proses pekerjaan dimanapun dan kapanpun</string>
     <string name="desc_intro3">Dapatkan furniture rumah dengan kualitas dan harga terbaik untuk memenuhi kebutuhan furniture rumahmu</string>
+    <string name="blank">blank</string>
+    <string name="no_order">Tidak ada pesanan</string>
+    <string name="jasa">Jasa</string>
+    <string name="produk">Produk</string>
+    <string name="message">Message</string>
 </resources>

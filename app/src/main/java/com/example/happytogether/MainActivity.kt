@@ -49,6 +49,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val homeFragment = HomeFragment.newInstance()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, homeFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav)
         bottomNav.setOnNavigationItemSelectedListener(m0nNavigationItemSelectedListener)
     }

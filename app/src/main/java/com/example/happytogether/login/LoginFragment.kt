@@ -14,14 +14,12 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val view = binding.root
-
-        binding.linearLayout3.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             startActivity(Intent(activity, MainActivity::class.java))
         }
-
         return view
     }
 
