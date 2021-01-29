@@ -1,4 +1,4 @@
-package com.example.happytogether
+package com.example.happytogether.intro
 
 import android.content.Intent
 import android.os.Build
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.happytogether.databinding.ActivityIntroSliderBinding
+import com.example.happytogether.login.StartupActivity
 
 
 class IntroSliderActivity : AppCompatActivity() {
@@ -65,7 +66,7 @@ class IntroSliderActivity : AppCompatActivity() {
             if (position < fragmentList.lastIndex) {
                 binding.vpIntroSlider.currentItem = position + 1
             } else {
-                startActivity(Intent(this,StartupActivity::class.java))
+                startActivity(Intent(this, StartupActivity::class.java))
                 finish()
             }
         }

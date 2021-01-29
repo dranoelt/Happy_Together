@@ -14,19 +14,19 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/app_logo"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginTop="60dp"
             android:contentDescription="@string/app_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/ic_logo" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -37,23 +37,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+            app:layout_constraintTop_toBottomOf="@+id/app_logo" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/btn_01_loyaltyprogram"
             android:layout_width="280dp"
             android:layout_height="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/shape_rect_trans_50_white"
             android:gravity="center"
             android:text="@string/loyalty"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            app:layout_constraintTop_toBottomOf="@+id/username" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/btn_02_history"
             android:layout_width="280dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
@@ -63,10 +63,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_01_loyaltyprogram" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/btn_03_Order"
             android:layout_width="280dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
@@ -76,21 +76,35 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_02_history" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/btn_04_changepass"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rect_trans_50_white"
+            android:gravity="center"
+            android:text="@string/Change_Pass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_03_Order" />
+
+        <TextView
+            android:id="@+id/btn_05_logout"
             android:layout_width="280dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/shape_rect_blue_gray_50"
             android:gravity="center"
-            android:text="@string/Change_Pass"
+            android:text="@string/logout"
             android:textColor="@color/white"
+            android:clickable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_04_changepass" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

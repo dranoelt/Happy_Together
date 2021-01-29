@@ -1,4 +1,4 @@
-package com.example.happytogether
+package com.example.happytogether.intro
 
 import android.os.Build
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import com.example.happytogether.R
 
 class SplashActivity : AppCompatActivity() {
 
@@ -20,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed(object :Runnable {
             override fun run() {
-                startActivity(Intent(this@SplashActivity,IntroSliderActivity::class.java))
+                startActivity(Intent(this@SplashActivity, IntroSliderActivity::class.java))
                 finish()
             }
         }, 2000)

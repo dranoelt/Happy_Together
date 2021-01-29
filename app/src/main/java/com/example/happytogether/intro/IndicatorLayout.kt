@@ -1,9 +1,10 @@
-package com.example.happytogether
+package com.example.happytogether.intro
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
+import com.example.happytogether.R
 
 
 class IndicatorLayout : LinearLayout {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroSliderActivity"
+    tools:context=".intro.IntroSliderActivity"
     android:background="@color/blue_gray"
     android:id="@+id/introContainer">
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.example.happytogether.IndicatorLayout
+    <com.example.happytogether.intro.IndicatorLayout
         android:id="@+id/indicatorLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

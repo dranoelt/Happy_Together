@@ -6,7 +6,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".Intro1Fragment">
+    tools:context=".intro.Intro1Fragment">
 
     <ImageView
         android:layout_width="300dp"

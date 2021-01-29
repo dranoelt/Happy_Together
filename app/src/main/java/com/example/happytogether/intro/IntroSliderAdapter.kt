@@ -1,4 +1,4 @@
-package com.example.happytogether
+package com.example.happytogether.intro
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

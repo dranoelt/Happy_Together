@@ -2,7 +2,10 @@ package com.example.happytogether
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import com.example.happytogether.ui.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -13,11 +16,6 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_home -> {
                 val homeFragment = HomeFragment.newInstance()
                 openFragment(homeFragment)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.nav_order -> {
-                val orderFragment = OrderFragment.newInstance()
-                openFragment(orderFragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_cart -> {
@@ -49,14 +47,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val homeFragment = HomeFragment.newInstance()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, homeFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit{
+                setReorderingAllowed(true)
+                add<HomeFragment>(R.id.container)
+            }
+        }
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav)
         bottomNav.setOnNavigationItemSelectedListener(m0nNavigationItemSelectedListener)
+
     }
 }
