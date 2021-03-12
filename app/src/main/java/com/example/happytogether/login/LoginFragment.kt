@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.happytogether.MainActivity
+import com.example.happytogether.data.Data
+import com.example.happytogether.data.EXTRA_DATA
 import com.example.happytogether.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -17,9 +19,21 @@ class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val view = binding.root
-
+        val nama = binding.email.text
         binding.btnLogin.setOnClickListener{
-            startActivity(Intent(activity, MainActivity::class.java))
+            val intent = Intent(this.activity, MainActivity::class.java)
+            val bundle = Bundle()
+            val parcel = Data("$nama")
+
+
+            bundle.putParcelable(EXTRA_DATA, parcel)
+            intent.putExtra("Bundle", bundle)
+            startActivity(intent)
+
+//            var intentAct = Intent(activity, MainActivity::class.java)
+//            var d = Data ("$nama")
+//            intentAct.putExtra(EXTRA_DATA, d)
+//            startActivity(intentAct)
         }
         return view
     }

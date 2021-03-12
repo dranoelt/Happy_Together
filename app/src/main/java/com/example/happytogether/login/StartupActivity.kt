@@ -5,8 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import com.example.happytogether.R
-import com.example.happytogether.login.StartupFragment
-import com.example.happytogether.ui.HomeFragment
+
 
 
 class StartupActivity : AppCompatActivity() {
