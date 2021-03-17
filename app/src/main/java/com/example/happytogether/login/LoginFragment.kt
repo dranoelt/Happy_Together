@@ -21,13 +21,9 @@ class LoginFragment : Fragment() {
         val view = binding.root
         val nama = binding.email.text
         binding.btnLogin.setOnClickListener{
-            val intent = Intent(this.activity, MainActivity::class.java)
-            val bundle = Bundle()
-            val parcel = Data("$nama")
-
-
-            bundle.putParcelable(EXTRA_DATA, parcel)
-            intent.putExtra("Bundle", bundle)
+            var intent = Intent(this.activity, MainActivity::class.java)
+            var parcel = Data("$nama")
+            intent.putExtra(EXTRA_DATA, parcel)
             startActivity(intent)
 
 //            var intentAct = Intent(activity, MainActivity::class.java)

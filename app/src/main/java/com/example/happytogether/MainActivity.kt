@@ -13,7 +13,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var dd: Data
 
     private val m0nNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener {
         item -> when (item.itemId) {
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_profile -> {
-                val profileFragment = ProfileFragment.newInstance(Data())
+                val profileFragment = ProfileFragment.newInstance()
                 openFragment(profileFragment)
                 return@OnNavigationItemSelectedListener true
             }
@@ -42,7 +41,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openFragment(fragment: Fragment) {
+        var d = intent.getParcelableExtra<Data>(EXTRA_DATA)
         val transaction = supportFragmentManager.beginTransaction()
+        val myBundle= Bundle()
+        myBundle.putString(EXTRA_DATA,"${d?.Nama}")
+        fragment.arguments = myBundle
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
@@ -57,11 +60,7 @@ class MainActivity : AppCompatActivity() {
                 add<HomeFragment>(R.id.container)
             }
         }
-        val bundle = intent.getBundleExtra("Bundle")
-        val objectss = bundle?.getParcelable<Data>(EXTRA_DATA)
-        val text: TextView = findViewById(R.id.textView6)
-//        var d :Data? = intent.getParcelableExtra(EXTRA_DATA)
-        text.text = "$objectss.Nama"
+
 
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav)
         bottomNav.setOnNavigationItemSelectedListener(m0nNavigationItemSelectedListener)

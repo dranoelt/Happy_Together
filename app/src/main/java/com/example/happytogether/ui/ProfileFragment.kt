@@ -10,27 +10,21 @@ import android.view.ViewGroup
 import com.example.happytogether.data.Data
 import com.example.happytogether.data.EXTRA_DATA
 import com.example.happytogether.databinding.FragmentProfileBinding
+import com.example.happytogether.login.LoginFragment
 import com.example.happytogether.login.StartupActivity
 
 class ProfileFragment : Fragment() {
 
-    private lateinit var myObject: Data
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (arguments != null) {
-            myObject = requireArguments().getParcelable(EXTRA_DATA)!!
-        }
-
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val view = binding.root
-        binding.username.text = myObject.Nama
+
+        binding.username.text = arguments?.getString(EXTRA_DATA)
         binding.btn05Logout.setOnClickListener {
             startActivity(Intent(activity, StartupActivity::class.java))
         }
@@ -38,13 +32,7 @@ class ProfileFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(myObject: Data): ProfileFragment {
-            val fragment = ProfileFragment()
-            val args = Bundle()
-            args.putParcelable(EXTRA_DATA, myObject)
-            fragment.arguments = args
-            return fragment
-        }
+        fun newInstance(): ProfileFragment = ProfileFragment()
     }
 
 
