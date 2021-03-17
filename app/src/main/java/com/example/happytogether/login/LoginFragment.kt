@@ -19,12 +19,19 @@ class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val view = binding.root
-        val nama = binding.email.text
+        var nama = binding.email.text
         binding.btnLogin.setOnClickListener{
             var intent = Intent(this.activity, MainActivity::class.java)
-            var parcel = Data("$nama")
-            intent.putExtra(EXTRA_DATA, parcel)
+            if (nama.toString() == "") {
+                var parcel = Data()
+                intent.putExtra(EXTRA_DATA, parcel)
+            }
+            else {
+                var parcel = Data("$nama")
+                intent.putExtra(EXTRA_DATA, parcel)
+            }
             startActivity(intent)
+
 
 //            var intentAct = Intent(activity, MainActivity::class.java)
 //            var d = Data ("$nama")
