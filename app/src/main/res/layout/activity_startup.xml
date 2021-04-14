@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login.StartupActivity"
-    android:background="@color/blue_gray">
+    android:background="@drawable/ic_loginscreen01_01">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"

@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.StartupFragment"
-    android:background="@color/blue_gray">
-
+    tools:context=".login.StartupFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -15,10 +13,10 @@
         <ImageView
             android:id="@+id/app_logo"
             android:layout_width="137dp"
-            android:layout_height="131dp"
+            android:layout_height="137dp"
             android:layout_marginTop="168dp"
             android:contentDescription="@string/app_name"
-            android:src="@mipmap/ic_logo"
+            android:src="@drawable/ic_logo_01"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,34 +38,34 @@
             android:id="@+id/btn_login"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginTop="652dp"
+            android:layout_marginBottom="48dp"
             android:background="@drawable/shape_rect_white_8"
             android:clickable="true"
             android:fontFamily="@font/djb_stinky_marker"
+            android:gravity="center"
             android:text="@string/login"
             android:textColor="@color/black"
-            android:gravity="center"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_register"
-            app:layout_constraintHorizontal_bias="0.55"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.573"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/btn_register"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginTop="652dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="48dp"
             android:background="@drawable/shape_rect_orange_8"
-            android:fontFamily="@font/djb_stinky_marker"
-            android:text="@string/register"
             android:clickable="true"
-            android:textSize="16sp"
+            android:fontFamily="@font/djb_stinky_marker"
             android:gravity="center"
+            android:text="@string/register"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
