@@ -26,7 +26,6 @@ class LoginIntentTest {
     }
     @Test
     fun clickLoginButton() {
-//        onView(withId(R.id.password)).perform(typeText("alo"))
         val scenario = launchFragmentInContainer<LoginFragment>()
         val expectedIntent : org.hamcrest.Matcher<Intent>? =
             allOf(
