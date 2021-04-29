@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.happytogether.MainActivity
 import com.example.happytogether.data.Data
 import com.example.happytogether.data.EXTRA_DATA
 import com.example.happytogether.databinding.FragmentProfileBinding
@@ -26,7 +27,8 @@ class ProfileFragment : Fragment() {
 
         binding.username.text = arguments?.getString(EXTRA_DATA)
         binding.btn05Logout.setOnClickListener {
-            startActivity(Intent(activity, StartupActivity::class.java))
+            var intent = Intent(this.activity, StartupActivity::class.java)
+            startActivity(intent)
         }
         return view
     }

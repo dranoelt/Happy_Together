@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import com.example.happytogether.MainActivity
+import com.example.happytogether.R
 import com.example.happytogether.data.Data
 import com.example.happytogether.data.EXTRA_DATA
 import com.example.happytogether.databinding.FragmentLoginBinding
@@ -25,10 +28,12 @@ class LoginFragment : Fragment() {
             if (nama.toString() == "") {
                 var parcel = Data()
                 intent.putExtra(EXTRA_DATA, parcel)
+//                Toast.makeText(this.activity, R.string.toast_nama, Toast.LENGTH_SHORT).show()
             }
             else {
                 var parcel = Data("$nama")
                 intent.putExtra(EXTRA_DATA, parcel)
+
             }
             startActivity(intent)
 

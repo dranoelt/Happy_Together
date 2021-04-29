@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/orange_500"
-    tools:context=".ui.ProfileFragment">
+    tools:context=".ui.ProfileFragment"
+    android:id="@+id/fragment_profile">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
